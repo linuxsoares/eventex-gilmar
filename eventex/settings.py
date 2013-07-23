@@ -24,7 +24,6 @@ PROJECT_DIR = Path(__file__).parent
 #        'PORT': '',                      # Set to empty string for default.
 #    }
 #}
-
 DATABASES = {
     'default': dj_database_url.config(
         default='sqlite:///' + PROJECT_DIR.child('database.db'))

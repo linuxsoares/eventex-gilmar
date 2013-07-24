@@ -2,7 +2,7 @@
 import dj_database_url
 from unipath import Path
 
-DEBUG = True
+DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (

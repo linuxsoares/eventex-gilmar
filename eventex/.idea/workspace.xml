@@ -5,7 +5,7 @@
     <ignored path="eventex.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/style.css" changelist="0f9d4f76-b8fd-4505-a4ab-55a1f7ac1b7d" time="1374810870870" ignored="false" />
-    <file path="/index.html" changelist="0f9d4f76-b8fd-4505-a4ab-55a1f7ac1b7d" time="1374813916368" ignored="false" />
+    <file path="/index.html" changelist="0f9d4f76-b8fd-4505-a4ab-55a1f7ac1b7d" time="1374814300832" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,7 +37,7 @@
       <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/core/templates/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="10" selection-start="705" selection-end="705" vertical-scroll-proportion="0.5311973">
+            <state line="21" column="8" selection-start="706" selection-end="706" vertical-scroll-proportion="0.5311973">
               <folding />
             </state>
           </provider>
@@ -63,13 +63,6 @@
       </file>
       <file leaf-file-name="logo1.png" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/core/static/img/logo1.png">
-          <provider selected="true" editor-type-id="images">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="logo.png" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/static/img/logo.png">
           <provider selected="true" editor-type-id="images">
             <state />
           </provider>
@@ -459,13 +452,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1123" column="0" selection-start="46950" selection-end="46950" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/core/static/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="62" column="21" selection-start="752" selection-end="752" vertical-scroll-proportion="0.0">
@@ -478,14 +464,16 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/static/img/logo.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1123" column="0" selection-start="46950" selection-end="46950" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/core/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="10" selection-start="705" selection-end="705" vertical-scroll-proportion="0.5311973">
+        <state line="21" column="8" selection-start="706" selection-end="706" vertical-scroll-proportion="0.5311973">
           <folding />
         </state>
       </provider>

@@ -5,11 +5,11 @@ from unipath import Path
 
 PROJECT_DIR = Path(__file__).parent
 
-DEBUG = False
+DEBUG = True
 
 from StdSuites import handlers
 
-DEBUG = os.environ.get('DEBUG') == 'False'
+#DEBUG = os.environ.get('DEBUG') == 'False'
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (

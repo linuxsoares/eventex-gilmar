@@ -5,11 +5,8 @@ import dj_database_url
 
 PROJECT_DIR = Path(__file__).parent
 
-#DEBUG = False
-
-from StdSuites import handlers
-
 DEBUG = os.environ.get('DEBUG') == 'False'
+#DEBUG=True
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
@@ -18,26 +15,23 @@ ADMINS = (
 
 MANAGERS = ADMINS
 
-PROJECT_DIR = Path(__file__).parent
+DATABASES = {'default': dj_database_url.config(default='sqlite:///' + PROJECT_DIR.child('database.db'))}
 
 #DATABASES = {
-#    'default': {
-#        'ENGINE': 'django.db.backends.sqlite3', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-#        'NAME': PROJECT_DIR.child('database.db'),                      # Or path to database file if using sqlite3.
-#        # The following settings are not used with sqlite3:
-#        'USER': '',
-#        'PASSWORD': '',
-#        'HOST': '',                      # Empty for localhost through domain sockets or '127.0.0.1' for localhost through TCP.
-#        'PORT': '',                      # Set to empty string for default.
-#    }
+# 'default': {
+# 'ENGINE': 'django.db.backends.sqlite3', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
+# 'NAME': PROJECT_DIR.child('database.db'), # Or path to database file if using sqlite3.
+# # The following settings are not used with sqlite3:
+# 'USER': 'admin',
+# 'PASSWORD': 'admin',
+# 'HOST': '', # Empty for localhost through domain sockets or '127.0.0.1' for localhost through TCP.
+# 'PORT': '', # Set to empty string for default.
+# }
 #}
-DATABASES = {
-    'default': dj_database_url.config(default='sqlite:///' + PROJECT_DIR.child('database.db'))
-}
 
 # Hosts/domain names that are valid for this site; required if DEBUG is False
 # See https://docs.djangoproject.com/en/1.5/ref/settings/#allowed-hosts
-ALLOWED_HOSTS = ['.localhost', '127.0.0.1', '.herokuapp.com']
+ALLOWED_HOSTS = ['.localhost', '.herokuapp.com', '127.0.0.1']
 
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
@@ -93,17 +87,17 @@ STATICFILES_DIRS = (
 STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
-#    'django.contrib.staticfiles.finders.DefaultStorageFinder',
+# 'django.contrib.staticfiles.finders.DefaultStorageFinder',
 )
 
 # Make this unique, and don't share it with anybody.
-SECRET_KEY = '013@boibti6bcix#dnfhc!05+s8+j5psj3y-%xzt&@a9b6ozm7'
+SECRET_KEY = '7j0t6i8kcg=ufd=9^41rok9axfk@*9ta_m8@cqi2%67s*)jt=%'
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
     'django.template.loaders.filesystem.Loader',
     'django.template.loaders.app_directories.Loader',
-#     'django.template.loaders.eggs.Loader',
+# 'django.template.loaders.eggs.Loader',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -134,11 +128,12 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'eventex.core',
+    #'eventex.subscriptions',
     # Uncomment the next line to enable the admin:
     # 'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
-    'eventex.core',
 )
 
 # A sample logging configuration. The only tangible logging

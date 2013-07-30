@@ -3,10 +3,12 @@ import  os
 import dj_database_url
 from unipath import Path
 
+PROJECT_DIR = Path(__file__).parent
+
 #DEBUG = True
 from StdSuites import handlers
 
-DEBUG = os.environ.get('DEBUG') == 'False'
+DEBUG = os.environ.get('DEBUG') == 'True'
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
@@ -165,7 +167,7 @@ LOGGING = {
             'level': 'DEBUG',
             'filters': ['require_debug_true'],
             'class': 'logging.StreamHandler',
-        },
+        }
     },
     'loggers': {
         'django.request': {

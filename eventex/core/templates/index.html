@@ -1,30 +1,5 @@
-<!doctype html>
-<html>
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <meta name="description" content="EventeX" />
-  <meta http-equiv='content-Language' content='en-US' />
-  <link type="image/x-icon" href="{{ STATIC_URL }}favicon.ico" rel="shortcut icon" />
- 
-  <title>EventeX</title>
- 
-  <link type="text/css" href="{{ STATIC_URL }}css/bootstrap.min.css" rel="stylesheet" media="screen" />
- 
-  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.0/jquery.min.js"></script>
-  <script src="http://code.jquery.com/jquery-latest.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-</head>
-<body>
-  <div id="page">
-    <div id="header">
-      <center>
-        <img src="{{ STATIC_URL }}img/logo.png" alt="EventeX" />
-        <br />
-        <br />
-      </center>
-    </div>
-    <div id="container" style="text-align: center">
-      <h1>Bem-vindo ao EventeX!</h1>
+{% extends 'base.html' %}
+{% block content %}
       <div class="hero-unit">
           <br />
           <p>O evento mais sensacional do ano depois do Dev in Rio!</p>
@@ -33,10 +8,4 @@
           <p style="color: red"><strong>OBS: Se o site Funcionar.</strong></p>
           <p>Para dúvidas e mais informações entre em contato com <a href="mailto:eventex@eventex.com.br">eventex@eventex.com.br</a></p>
       </div>
-    </div>
-    <div id="footer" style="text-align: center" class="modal-footer">
-      <p>&copy; 2012. <a rel="license" href="http://eventex.herike.com">EventeX</a>, some rights reserved. <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/3.0/br/80x15.png" /></a><a href="http://www.djangoproject.com/" id="django"><img src="https://www.djangoproject.com/m/img/badges/djangosite100x25_grey.gif" border="0" alt="A Django site." title="A Django site." /></a></p>
-    </div>
-  </div>
-</body>
-</html>
+{% endblock content %}

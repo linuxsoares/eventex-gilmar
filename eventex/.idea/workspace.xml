@@ -32,28 +32,10 @@
       <file leaf-file-name="settings.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="1" selection-start="137" selection-end="137" vertical-scroll-proportion="0.17736487">
+            <state line="35" column="0" selection-start="1060" selection-end="1060" vertical-scroll-proportion="0.7601351">
               <folding>
                 <element signature="e#39#49#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="urls.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="1" selection-start="659" selection-end="659" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="models.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
             </state>
           </provider>
         </entry>
@@ -468,18 +450,9 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="1" selection-start="137" selection-end="137" vertical-scroll-proportion="0.17736487">
-          <folding>
-            <element signature="e#39#49#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="1" selection-start="659" selection-end="659" vertical-scroll-proportion="0.0">
+        <state line="19" column="1" selection-start="659" selection-end="659" vertical-scroll-proportion="0.47107437">
           <folding />
         </state>
       </provider>
@@ -488,6 +461,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="35" column="0" selection-start="1060" selection-end="1060" vertical-scroll-proportion="0.7601351">
+          <folding>
+            <element signature="e#39#49#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -6,7 +6,7 @@ from unipath import Path
 #DEBUG = True
 from StdSuites import handlers
 
-DEBUG = os.environ.get('DEBUG') == 'True'
+DEBUG = os.environ.get('DEBUG') == 'False'
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (

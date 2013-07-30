@@ -1,7 +1,7 @@
 # Django settings for eventex project.
 import os
-import dj_database_url
 from unipath import Path
+import dj_database_url
 
 PROJECT_DIR = Path(__file__).parent
 
@@ -151,11 +151,11 @@ LOGGING = {
     'disable_existing_loggers': False,
     'filters': {
         'require_debug_false': {
-            '()': 'django.utils.log.RequireDebugFalse',
+            '()': 'django.utils.log.RequireDebugFalse'
         },
         'require_debug_true': {
-            '()': 'django.utils.log.RequireDebugTrue',
-        },
+            '()': 'django.utils.log.RequireDebugTrue'
+        }
     },
     'handlers': {
         'mail_admins': {

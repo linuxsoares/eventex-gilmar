@@ -4,10 +4,12 @@ from django.conf import settings
 # Uncomment the next two lines to enable the admin:
 # from django.contrib import admin
 # admin.autodiscover()
+from django.views.generic import detail
 
 urlpatterns = patterns('',
     url(r'^$', 'eventex.core.views.homepage', name='homepage'),
     url(r'^inscricao/$', 'eventex.subscriptions.views.subscribe', name='subscribe'),
+    url(r'^inscricao/(\d+)/$', 'eventex.subscriptions.views.detail', name='detail'),
 
     # Examples:
     # url(r'^$', 'eventex.views.home', name='home'),

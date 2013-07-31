@@ -7,6 +7,7 @@ Replace this with more appropriate tests for your application.
 
 from django.test import TestCase
 from eventex.subscriptions.forms import SubscriptionForm
+from eventex.subscriptions.models import Subscription
 
 class SubscribeTest(TestCase):
 
@@ -37,8 +38,32 @@ class SubscribeTest(TestCase):
         form = self.resp.context['form']
         self.assertIsInstance(form, SubscriptionForm)
 
-    def test_form_has_fields(self):
-        'Form must have 4 fields'
-        form = self.resp.context['form']
-        self.assertItemsEqual(['name', 'email', 'cpf', 'phone'], form.fields)
+class SubscribePostTest(TestCase):
+    def setUp(self):
+        data = dict(name='Gilmar Soares', cpf='12345678902', email='outro.soares@gmail.com', phone='11-980925399')
+        self.resp = self.client.post('/inscricao/', data)
 
+    def test_post(self):
+        'Valid POST'
+        self.assertEqual(302, self.resp.status_code)
+
+    def test_save(self):
+        'Valid POST'
+        self.assertTrue(Subscription.objects.exists())
+
+class SubscribeInvalidPostTest(TestCase):
+    def setUp(self):
+        data = dict(name='Gilmar Soares', cpf='123456789021', email='outro.soares@gmail.com', phone='11-980925399')
+        self.resp = self.client.post('/inscricao/', data)
+
+    def test_post(self):
+        'Invalid POST'
+        self.assertEqual(200, self.resp.status_code)
+
+    def test_form_errors(self):
+        'Form'
+        self.assertTrue(self.resp.context['form'].errors)
+
+    def test_dont_save(self):
+        'Do not save data'
+        self.assertFalse(Subscription.objects.exists())

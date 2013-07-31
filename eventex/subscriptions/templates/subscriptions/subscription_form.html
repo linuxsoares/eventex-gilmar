@@ -6,22 +6,22 @@
     <p>
         <label for="{{ form.name.id_for_label }}">{{ form.name.label }}</label>
         {{ form.name }}
-        {{ form.errors }}
+        {{ form.name.errors }}
     </p>
     <p>
         <label for="{{ form.cpf.id_for_label }}">{{ form.cpf.label }}</label>
         {{ form.cpf }}
-        {{ form.errors }}
+        {{ form.cpf.errors }}
     </p>
     <p>
         <label for="{{ form.email.id_for_label }}">{{ form.email.label }}</label>
         {{ form.email }}
-        {{ form.errors }}
+        {{ form.email.errors }}
     </p>
     <p>
         <label for="{{ form.phone.id_for_label }}">{{ form.phone.label }}</label>
         {{ form.phone }}
-        {{ form.errors}}
+        {{ form.phone.errors}}
     </p>
     <input type="submit" value="Cadastrar" class="button"/>
 </form>

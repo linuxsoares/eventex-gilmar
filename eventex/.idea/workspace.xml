@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0f9d4f76-b8fd-4505-a4ab-55a1f7ac1b7d" name="Default" comment="" />
+    <list default="true" id="0f9d4f76-b8fd-4505-a4ab-55a1f7ac1b7d" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/settings.py" afterPath="$PROJECT_DIR$/settings.py" />
+    </list>
     <ignored path="eventex.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/style.css" changelist="0f9d4f76-b8fd-4505-a4ab-55a1f7ac1b7d" time="1374810870870" ignored="false" />
     <file path="/index.html" changelist="0f9d4f76-b8fd-4505-a4ab-55a1f7ac1b7d" time="1375251704527" ignored="false" />
     <file path="/Dummy.txt" changelist="0f9d4f76-b8fd-4505-a4ab-55a1f7ac1b7d" time="1375241625810" ignored="false" />
-    <file path="/settings.py" changelist="0f9d4f76-b8fd-4505-a4ab-55a1f7ac1b7d" time="1375159759246" ignored="false" />
+    <file path="/settings.py" changelist="0f9d4f76-b8fd-4505-a4ab-55a1f7ac1b7d" time="1375253602577" ignored="false" />
     <file path="/tests.py" changelist="0f9d4f76-b8fd-4505-a4ab-55a1f7ac1b7d" time="1375163454891" ignored="false" />
     <file path="/urls.py" changelist="0f9d4f76-b8fd-4505-a4ab-55a1f7ac1b7d" time="1375250289358" ignored="false" />
     <file path="/views.py" changelist="0f9d4f76-b8fd-4505-a4ab-55a1f7ac1b7d" time="1375251228045" ignored="false" />
@@ -43,7 +45,7 @@
       <file leaf-file-name="settings.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="131" column="4" selection-start="4618" selection-end="4618" vertical-scroll-proportion="3.109177">
+            <state line="17" column="1" selection-start="295" selection-end="295" vertical-scroll-proportion="0.3085443">
               <folding>
                 <element signature="e#39#48#0" expanded="true" />
               </folding>
@@ -109,7 +111,6 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/core/tests.py" />
-        <option value="$PROJECT_DIR$/settings.py" />
         <option value="$PROJECT_DIR$/subscriptions/tests.py" />
         <option value="$PROJECT_DIR$/core/templates/base.html" />
         <option value="$PROJECT_DIR$/subscriptions/tests/test_forms.py" />
@@ -124,6 +125,7 @@
         <option value="$PROJECT_DIR$/subscriptions/templates/subscriptions/subscription_detail.html" />
         <option value="$PROJECT_DIR$/core/templates/index.html" />
         <option value="$PROJECT_DIR$/subscriptions/templates/subscriptions/subscription_form.html" />
+        <option value="$PROJECT_DIR$/settings.py" />
       </list>
     </option>
   </component>
@@ -627,7 +629,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="131" column="4" selection-start="4618" selection-end="4618" vertical-scroll-proportion="3.109177">
+        <state line="17" column="1" selection-start="295" selection-end="295" vertical-scroll-proportion="0.3085443">
           <folding>
             <element signature="e#39#48#0" expanded="true" />
           </folding>

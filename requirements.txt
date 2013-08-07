@@ -5,3 +5,4 @@ gunicorn==0.17.2
 psycopg2
 dj-static
 South==0.7.6
+mock=1.0.1

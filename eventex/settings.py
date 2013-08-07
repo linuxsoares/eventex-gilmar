@@ -13,6 +13,8 @@ ADMINS = (
     # ('Your Name', 'your_email@example.com'),
 )
 
+SOUTH_TESTS_MIGRATE = False
+
 MANAGERS = ADMINS
 
 DATABASES = {'default': dj_database_url.config(default='sqlite:///' + PROJECT_DIR.child('database.db'))}
@@ -37,11 +39,11 @@ ALLOWED_HOSTS = ['.localhost', '.herokuapp.com', '127.0.0.1']
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
 # although not all choices may be available on all operating systems.
 # In a Windows environment this must be set to your system time zone.
-TIME_ZONE = 'America/Chicago'
+TIME_ZONE = 'America/Sao_Paulo'
 
 # Language code for this installation. All choices can be found here:
 # http://www.i18nguy.com/unicode/language-identifiers.html
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'pt-BR'
 
 SITE_ID = 1
 
@@ -74,6 +76,8 @@ STATIC_ROOT = PROJECT_DIR.child('static')
 # URL prefix for static files.
 # Example: "http://example.com/static/", "http://static.example.com/"
 STATIC_URL = '/static/'
+
+ADMIN_MEDIA_PREFIX = '/usr/lib/python2.7/site-packages/django/contrib/admin/media/'
 
 # Additional locations of static files
 STATICFILES_DIRS = (
@@ -119,6 +123,7 @@ TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
+
 )
 
 INSTALLED_APPS = (
@@ -128,10 +133,12 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.admin',
+    'south',
     'eventex.core',
     'eventex.subscriptions',
     # Uncomment the next line to enable the admin:
-    # 'django.contrib.admin',
+
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
 )

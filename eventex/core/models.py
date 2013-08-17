@@ -54,3 +54,11 @@ class Talk(models.Model):
 
     def get_absolute_url(self):
         return '/palestras/%d/' % self.pk
+
+class Course(Talk):
+    slots = models.IntegerField()
+    notes = models.TextField()
+
+    objects = PeriodManager()
+
+

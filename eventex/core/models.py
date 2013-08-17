@@ -11,6 +11,10 @@ class Speaker(models.Model):
     url = models.URLField(_('Url'))
     description = models.TextField(_(u'Descrição'), blank=True)
 
+    class Meta:
+        verbose_name=_('palestrante')
+        verbose_name_plural=_('palestrantes')
+
     def __unicode__(self):
         return self.name
 
@@ -55,10 +59,30 @@ class Talk(models.Model):
     def get_absolute_url(self):
         return '/palestras/%d/' % self.pk
 
+    @property
+    def slides(self):
+        return self.media_set.filter(kind='SL')
+
+    @property
+    def videos(self):
+        return self.media_set.filter(kind='YT')
+
 class Course(Talk):
     slots = models.IntegerField()
     notes = models.TextField()
 
     objects = PeriodManager()
 
+class Media(models.Model):
+    MEDIA_TYPES = (
+        ('YT', _('Youtube')),
+        ('SL', _('Slideshare')),
+    )
 
+    talk = models.ForeignKey('Talk')
+    media_id = models.CharField(max_length=100)
+    title = models.CharField(max_length=200)
+    kind = models.CharField(max_length=2, choices=MEDIA_TYPES)
+
+    def __unicode__(self):
+        return '%s - %s' % (self.talk.title, self.title)

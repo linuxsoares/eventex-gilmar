@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load youtube slideshare %}
+
+{% block content %}
+    <h1>{{ talk.title }}</h1>
+    <p>{{ talk.start_time }}</p>
+    <p>{{ talk.description|linebreaks }}</p>
+
+    {% for video in talk.videos %}
+        <h2>{{ video.title }}</h2>
+        {% youtube video.media_id %}
+    {% endfor %}
+
+    {% for slide in talk.slides %}
+        <h2>{{ slide.title }}</h2>
+        {% slideshare slide.media_id %}
+    {% endfor %}
+
+{% endblock %}

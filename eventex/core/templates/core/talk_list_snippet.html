@@ -1,14 +1,8 @@
 <div class="palestra">
-    <h4>
-        <a href="{% url talk %}">
-            {{ talk.start_time }} - {{ talk.title }}
-        </a>
-    </h4>
+    <h4><a href="{{ talk.get_absolute_url }}">{{ talk.start_time }} - {{ talk.title }}</a></h4>
     {% for speaker in talk.speakers.all %}
         <h5>
-            <a href="{% url speaker %}" title="{{ speaker.description|truncatewords:30 }}">
-                {{ speaker.name }}
-            </a>
+            <a href="{{ speaker.get_absolute_url }}" title="{{ speaker.description }}">{{ speaker.name }}</a>
         </h5>
     {% endfor %}
     <p>{{ talk.description }}</p>

@@ -9,11 +9,12 @@ class TalkListTest(TestCase):
         s = Speaker.objects.create(name='Gilmar Soares', slug='gilmar-soares',
                                    url='http://about.me/gilmar.soares', description='Passionate software developer!')
         t1 = Talk.objects.create(description=u'Descrição da Palestra',
-                                 title=u'Título da Palestra', start_time='10:00')
+                                 title=u'Titulo da Palestra', start_time='10:00')
         t2 = Talk.objects.create(description=u'Descrição da Palestra',
-                                 title=u'Título da Palestra', start_time='13:00')
-        t1.speakers.add(s)
-        t2.speakers.add(s)
+                                 title=u'Titulo da Palestra', start_time='13:00')
+        s.talk_set.add(t1)
+        s.talk_set.add(t2)
+
         self.resp = self.client.get(r('core:talk_list'))
 
     def test_get(self):
@@ -23,10 +24,10 @@ class TalkListTest(TestCase):
         self.assertTemplateUsed(self.resp, 'core/talk_list.html')
 
     def test_html(self):
-        self.assertContains(self.resp, u'Título da Palestra', 2)
+        self.assertContains(self.resp, u'Titulo da Palestra', 2)
         self.assertContains(self.resp, u'/palestras/1/')
         self.assertContains(self.resp, u'/palestras/2/')
-        self.assertContains(self.resp, u'/palestrantes/gilmar-soares/', 2)
+        self.assertContains(self.resp, u'/palestrantes/gilmar-soares', 2)
         self.assertContains(self.resp, u'Passionate software developer!', 2)
         self.assertContains(self.resp, u'Gilmar Soares', 2)
         self.assertContains(self.resp, u'Descrição da Palestra', 2)

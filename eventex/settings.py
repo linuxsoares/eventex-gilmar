@@ -79,6 +79,8 @@ STATIC_URL = '/static/'
 
 ADMIN_MEDIA_PREFIX = '/usr/lib/python2.7/site-packages/django/contrib/admin/media/'
 
+#AUTH_USER_MODEL = 'myauth.User'
+
 # Additional locations of static files
 STATICFILES_DIRS = (
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
@@ -137,6 +139,7 @@ INSTALLED_APPS = (
     'south',
     'eventex.core',
     'eventex.subscriptions',
+    'eventex.myauth',
     # Uncomment the next line to enable the admin:
 
     # Uncomment the next line to enable admin documentation:

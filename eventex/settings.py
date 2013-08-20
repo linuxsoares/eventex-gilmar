@@ -79,7 +79,7 @@ STATIC_URL = '/static/'
 
 ADMIN_MEDIA_PREFIX = '/usr/lib/python2.7/site-packages/django/contrib/admin/media/'
 
-#AUTH_USER_MODEL = 'myauth.User'
+AUTH_USER_MODEL = 'myauth.User'
 
 # Additional locations of static files
 STATICFILES_DIRS = (

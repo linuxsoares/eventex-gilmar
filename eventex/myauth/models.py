@@ -10,8 +10,8 @@ class UserManager(BaseUserManager):
         user.save(using=self._db)
         return user
 
-    def create_superuser(self, cpf, password):
-        return self.create_user(cpf, password)
+    def create_superuser(self, cpf=None, name=None, password=None):
+        return self.create_user(cpf, name, password)
 
 class User(AbstractBaseUser):
     cpf = models.CharField(max_length=11, unique=True, db_index=True)
